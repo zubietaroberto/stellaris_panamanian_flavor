@@ -49,6 +49,10 @@ var filenames = [
     path:'islands.txt',
     name:'planet_ocean',
   },
+  {
+    path:'beaches.txt',
+    name:'planet_tropical',
+  },
 ]
 
 Promise
