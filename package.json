@@ -8,5 +8,9 @@
     "start": "nodejs index.js"
   },
   "author": "zubietaroberto",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.13.1",
+    "mu2": "^0.5.21"
+  }
 }
