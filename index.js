@@ -24,6 +24,10 @@ var filenames = [
   {
     path: path.join(__dirname, 'namelists/panama_rivers.txt'),
     name:'ship_constructors',
+  },
+  {
+    path: path.join(__dirname, 'namelists/herrera.txt'),
+    name:'planet_desert',
   }
 ]
 
