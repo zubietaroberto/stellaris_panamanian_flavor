@@ -14,26 +14,26 @@ var output_file = path.join(output_folder, 'Panamanian.txt');
 // Filepaths
 var filenames = [
   {
-    path: path.join(__dirname, 'namelists/panama_city_neighborhoods.txt'),
+    path:'panama_city_neighborhoods.txt',
     name:'ship_corvettes'
   },
   {
-    path: path.join(__dirname, 'namelists/panama_city_streets.txt'),
+    path:'panama_city_streets.txt',
     name:'ship_destroyers'
   },
   {
-    path: path.join(__dirname, 'namelists/panama_rivers.txt'),
+    path:'panama_rivers.txt',
     name:'ship_constructors',
   },
   {
-    path: path.join(__dirname, 'namelists/herrera.txt'),
+    path:'herrera.txt',
     name:'planet_desert',
   },
 
   // January 9th Martyrs. Source: http://panamapoesia.com/9enero02.php
   // January 9th Massacre: https://en.wikipedia.org/wiki/Martyrs%27_Day_(Panama)
   {
-    path: path.join(__dirname, 'namelists/martyrs_january_9.txt'),
+    path:'martyrs_january_9.txt',
     name:'outpost',
   }
 ]
@@ -43,9 +43,10 @@ Promise
 
   // Transform each filename into a namelist
   .map( filename => {
+    var filepath = path.join(__dirname, `namelists/${filename.path}`);
     return Promise
-      .fromCallback(cb => fs.readFile(filename.path, {encoding:'UTF-8'}, cb))
-      .then(raw_file => {
+      .fromCallback(  cb => fs.readFile(filepath, {encoding:'UTF-8'}, cb))
+      .then(    raw_file => {
         var parsed_items = _(raw_file.split(/\r\n|\r|\n/))
           // Remove Empty
           .reject(item_name  => _.isEmpty(item_name))
