@@ -58,6 +58,15 @@ var filenames = [
     name:'planet_continental',
   },
   {
+    path:'panama_canal.txt',
+    name:'planet_gaia',
+  },
+
+  {
+    path:'archeology.txt',
+    name:'planet_tomb',
+  },
+  {
     path:'filler_planets.txt',
     name:'planet_generic',
   },
