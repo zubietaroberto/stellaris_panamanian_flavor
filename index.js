@@ -40,7 +40,11 @@ var filenames = [
   {
     path:'martyrs_january_9.txt',
     name:'outpost',
-  }
+  },
+  {
+    path:'mountain_towns.txt',
+    name:'planet_arctic',
+  },
 ]
 
 Promise
