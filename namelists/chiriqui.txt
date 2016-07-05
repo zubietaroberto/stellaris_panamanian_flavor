@@ -6,9 +6,9 @@ Barú
 Puerto Armuelles
 Limones
 Boquerón
-Boquete
+# Boquete
 Caldera
-Volcán
+# Volcán
 Bugaba
 La Concepción
 David

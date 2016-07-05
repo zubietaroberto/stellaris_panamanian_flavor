@@ -37,9 +37,6 @@ var filenames = [
     path:'chiriqui.txt',
     name:'planet_tundra',
   },
-
-  // January 9th Martyrs. Source: http://panamapoesia.com/9enero02.php
-  // January 9th Massacre: https://en.wikipedia.org/wiki/Martyrs%27_Day_(Panama)
   {
     path:'martyrs_january_9.txt',
     name:'outpost',
@@ -54,11 +51,18 @@ Promise
     var filepath = path.join(__dirname, `namelists/${filename.path}`);
     return Promise
       .fromCallback(  cb => fs.readFile(filepath, {encoding:'UTF-8'}, cb))
+
+      // Parse files into a list of names
       .then(    raw_file => {
-        var parsed_items = _(raw_file.split(/\r\n|\r|\n/))
+        return Promise
+          .all(raw_file.split(/\r\n|\r|\n/))
           // Remove Empty
-          .reject(item_name  => _.isEmpty(item_name))
-        return {list: parsed_items, name:filename.name }
+          .filter( item_name    => !_.isEmpty(item_name))
+          // Remove Commented
+          .filter( item_name    => !_.startsWith(item_name, "#"))
+          // Return result
+          .then(  parsed_items  => ({list: parsed_items, name:filename.name }) )
+          ;
       })
       ;
   })
@@ -79,14 +83,12 @@ Promise
       // Parse names
       var output = _(struct[prop])
 
-        //Reduce to lines of eight
+        //Join into lines
         .reduce( (out_array, item_name, counter) => {
-
-          // Every eight items, add a new line
           if (counter%items_per_line == 0){
+            // Add a new line
             out_array.push("\t\t\t");
           }
-
           out_array[Math.floor(counter/items_per_line)] += `"${item_name}" `;
           return out_array;
         }, [])
@@ -94,10 +96,8 @@ Promise
         // Add Line Breaks
         .join("\n")
         ;
-
       struct[prop] = output;
     }
-
     return struct;
 
   })
