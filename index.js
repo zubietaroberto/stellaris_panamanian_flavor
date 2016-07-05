@@ -33,6 +33,10 @@ var filenames = [
     path:'los_santos.txt',
     name:'planet_arid',
   },
+  {
+    path:'chiriqui.txt',
+    name:'planet_tundra',
+  },
 
   // January 9th Martyrs. Source: http://panamapoesia.com/9enero02.php
   // January 9th Massacre: https://en.wikipedia.org/wiki/Martyrs%27_Day_(Panama)
