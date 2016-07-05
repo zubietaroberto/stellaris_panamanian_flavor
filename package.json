@@ -1,0 +1,11 @@
+{
+  "name": "stellaris_panama",
+  "version": "1.0.0",
+  "description": "Panamanian Namelist for Stellaris",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "zubietaroberto",
+  "license": "ISC"
+}
