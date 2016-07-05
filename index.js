@@ -28,6 +28,13 @@ var filenames = [
   {
     path: path.join(__dirname, 'namelists/herrera.txt'),
     name:'planet_desert',
+  },
+
+  // January 9th Martyrs. Source: http://panamapoesia.com/9enero02.php
+  // January 9th Massacre: https://en.wikipedia.org/wiki/Martyrs%27_Day_(Panama)
+  {
+    path: path.join(__dirname, 'namelists/martyrs_january_9.txt'),
+    name:'outpost',
   }
 ]
 
