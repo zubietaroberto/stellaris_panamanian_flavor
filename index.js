@@ -45,6 +45,10 @@ var filenames = [
     path:'mountain_towns.txt',
     name:'planet_arctic',
   },
+  {
+    path:'islands.txt',
+    name:'planet_ocean',
+  },
 ]
 
 Promise
