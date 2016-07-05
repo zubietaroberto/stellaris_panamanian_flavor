@@ -57,6 +57,14 @@ var filenames = [
     path:'towns_other.txt',
     name:'planet_continental',
   },
+  {
+    path:'filler_planets.txt',
+    name:'planet_generic',
+  },
+  {
+    path:'province_capitals.txt',
+    name:'planet_generic',
+  },
 ]
 
 Promise
@@ -88,7 +96,8 @@ Promise
     if (!_(accumulator).has(parsed_file.name)){
       accumulator[parsed_file.name] = parsed_file.list;
     } else {
-      accumulator[parsed_file.name].push(parsed_file.list);
+      var new_array = _.concat(accumulator[parsed_file.name], parsed_file.list);
+      accumulator[parsed_file.name] = new_array;
     }
     return accumulator;
   }, {})

@@ -4,7 +4,6 @@ Santiago
 Corozal
 Cañazas
 Calobre
-Santiago de Veraguas
 Atalaya
 Puerto Mutiz
 Montijo
@@ -13,7 +12,6 @@ Divisa
 Pocrí
 Aguaduce
 Natá de los Caballeros
-Penonomé
 La Pintada
 Churuquita Grande
 Churuquita Chica
@@ -21,12 +19,17 @@ La Candelaria
 Antón
 Rio Hato
 Sajalices
-La Chorrera
 Arraiján
 Burunga
+Capira
+Pacora
+Chepo
+Yaviza
+Tortí
 Donoso
 Cristóbal
 Cativá
 Miguel de la Borda
 Nombre de Dios
 Nuevo Chagres
+Puerto Obaldía
