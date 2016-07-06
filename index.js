@@ -26,6 +26,18 @@ var filenames = [
     name:'ship_constructors',
   },
   {
+    path:'artists.txt',
+    name:'ship_science',
+  },
+  {
+    path:'sports.txt',
+    name:'ship_generic',
+  },
+  {
+    path:'music.txt',
+    name:'ship_colony',
+  },
+  {
     path:'herrera.txt',
     name:'planet_desert',
   },
