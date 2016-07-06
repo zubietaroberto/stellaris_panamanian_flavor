@@ -120,3 +120,6 @@ nbproject
 
 # PRIVATE KEYS
 private.json
+
+#Other
+output.txt

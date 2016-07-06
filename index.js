@@ -8,8 +8,7 @@ var Promise = require('bluebird');
 // Basic constants
 mu.root = __dirname + '/templates'
 var items_per_line = 8;
-var output_folder = path.join(__dirname, 'outputs');
-var output_file = path.join(output_folder, 'Panamanian.txt');
+var output_file = path.join(__dirname, 'output.txt');
 
 // Filepaths
 var filenames = [
@@ -166,11 +165,12 @@ Promise
 
   // Output file from the template using Mustache
   .then(struct => {
+
+    var fileSystemStream = fs.createWriteStream(output_file, {encoding:'UTF-8'});
+    
     mu
       .compileAndRender('namelist.mustache', struct)
-      .on('data', data => {
-        console.log(data.toString());
-      })
+      .pipe(fileSystemStream);
       ;
 
   })
