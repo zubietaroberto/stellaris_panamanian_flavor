@@ -31,11 +31,15 @@ var filenames = [
   },
   {
     path:'sports.txt',
-    name:'ship_generic',
+    name:'ship_cruiser',
   },
   {
     path:'colonial.txt',
     name:'ship_generic',
+  },
+  {
+    path:'fauna.txt',
+    name:'ship_cruiser',
   },
   {
     path:'music.txt',
@@ -93,6 +97,10 @@ var filenames = [
   {
     path:'province_capitals.txt',
     name:'planet_generic',
+  },
+  {
+    path:'panama_canal_zone.txt',
+    name:'fort',
   },
 ]
 
