@@ -62,6 +62,10 @@ var filenames = [
   },
   {
     path:'martyrs_january_9.txt',
+    name:'fort',
+  },
+  {
+    path:'martyrs_january_9.txt',
     name:'outpost',
   },
   {
@@ -99,7 +103,7 @@ var filenames = [
   },
   {
     path:'panama_canal_zone.txt',
-    name:'fort',
+    name:'transport',
   },
 
   {
