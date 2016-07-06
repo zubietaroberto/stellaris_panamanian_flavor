@@ -34,8 +34,16 @@ var filenames = [
     name:'ship_generic',
   },
   {
+    path:'colonial.txt',
+    name:'ship_generic',
+  },
+  {
     path:'music.txt',
     name:'ship_colony',
+  },
+  {
+    path:'vip_historical.txt',
+    name:'ship_battleship',
   },
   {
     path:'herrera.txt',
