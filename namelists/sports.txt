@@ -2,6 +2,8 @@ Mano de Piedra
 Irving Saladino
 Mariano Rivera
 Carlos Lee
+Rod Carew
+Roberto Kelly
 
 # Football Team. Source: https://es.wikipedia.org/wiki/Selecci%C3%B3n_de_f%C3%BAtbol_de_Panam%C3%A1#Convocados
 Jaime Penedo
