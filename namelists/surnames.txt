@@ -1,8 +1,8 @@
-Gonzalez
+González
 Rodríguez
 Castillo
 Sánchez
-Martinez
+Martínez
 Pérez
 Hernández
 Moreno
@@ -14,12 +14,12 @@ Díaz
 Guerra
 Morales
 Cedeño
-Jimenez
+Jiménez
 Herrera
 De León
-Gomez
-Vasquez
-Lopez
+Gómez
+Vásquez
+López
 Caballero
 Ábrego
 Vega
@@ -32,17 +32,17 @@ Araúz
 Aguilar
 Rivera
 Vergara
-Nuñez
-Gutierrez
+Núñez
+Gutiérrez
 Miranda
-Dominguez
+Domínguez
 Valdés
 Torres
 Espinosa
-Ruiz
+Ruíz
 Vargas
 Flores
-Muñoz
+Muñóz
 Delgado
 Pineda
 Atencio
@@ -51,12 +51,12 @@ Santos
 Barría
 Fernandez
 Reyes
-Ortiz
+Ortíz
 Bonilla
 Santamaria
 Navarro
 Serrano
-Solis
+Solís
 Acosta
 Medina
 Pinzón
@@ -64,13 +64,13 @@ Concepción
 Jaén
 Murillo
 Pimentel
-Chavez
+Chávez
 Castro
 Aparicio
 Mojica
 Cruz
 Marín
-Avila
+Ávila
 Pinto
 Guevara
 Alvarado
@@ -79,13 +79,13 @@ Samaniego
 Barrios
 Camarena
 Bernal
-Alvarez
+Álvarez
 Sanjur
 Franco
 Peralta
 Salazar
 Saldaña
-De Gonzalez
+De González
 Jaramillo
 Urriola
 Samudio
@@ -104,15 +104,15 @@ Moran
 Cerrud
 Palacio
 Osorio
-De Rodriguez
+De Rodríguez
 Robles
 Peña
 Calderón
-Quiroz
+Quiróz
 Guerrero
 Smith
 Almanza
-Arcia
+Árcia
 Lezcano
 Rivas
 Soto
@@ -121,18 +121,18 @@ Nieto
 Montero
 Bethancourt
 Camargo
-Velasquez
+Velásquez
 Camaño
 Ureña
-Mendez
+Méndez
 Cáceres
-Cardenas
+Cárdenas
 Chavarría
-Valencia
+Valéncia
 Cortéz
-Ramirez
+Ramírez
 Tejada
-Beitia
+Beitía
 Arrocha
 Carrasco
 Hidalgo
@@ -142,11 +142,11 @@ Mendieta
 Adames
 Palacios
 Montezuma
-Cortes
+Cortés
 Del Cid
 Ibarra
 Lasso
-Frias
+Frías
 Trejos
 Espino
 Mosquera
@@ -154,22 +154,22 @@ Barrera
 Duarte
 Pinilla
 Rangel
-Quiros
-Galvez
+Quirós
+Gálvez
 Contreras
 Brown
 Cubilla
-Gaitan
+Gaitán
 Quiel
 Zambrano
 De La Cruz
 Gil
-Henriquez
+Henríquez
 Hurtado
-Melendez
+Meléndez
 Arias
 Rosas
-Gordon
+Gordón
 De Castillo
 Garrido
 Acevedo
@@ -178,23 +178,23 @@ Santana
 Sandoval
 Canto
 Valderrama
-Magallon
-Saenz
+Magallón
+Saénz
 Carpintero
-Juarez
+Juárez
 Almengor
 Bravo
 Coronado
 Pitty
 Cano
 Pino
-De Perez
+De Pérez
 Figueroa
 Ballesteros
 Jordan
 Mora
 Lorenzo
-Chacon
+Chacón
 Montilla
-Saez
+Saéz
 Otero
