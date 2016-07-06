@@ -1,6 +1,5 @@
 Alanje
 Canta Gallo
-Nuevo México
 Guarumal
 Barú
 Puerto Armuelles
@@ -11,7 +10,6 @@ Caldera
 # Volcán
 Bugaba
 La Concepción
-David
 San José de David
 Dolega
 Gualaca
