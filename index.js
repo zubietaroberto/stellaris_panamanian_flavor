@@ -101,6 +101,19 @@ var filenames = [
     path:'panama_canal_zone.txt',
     name:'fort',
   },
+
+  {
+    path:'name_male.txt',
+    name:'names_male',
+  },
+  {
+    path:'name_female.txt',
+    name:'names_female',
+  },
+  {
+    path:'surnames.txt',
+    name:'surnames',
+  },
 ]
 
 Promise
@@ -167,7 +180,7 @@ Promise
   .then(struct => {
 
     var fileSystemStream = fs.createWriteStream(output_file, {encoding:'UTF-8'});
-    
+
     mu
       .compileAndRender('namelist.mustache', struct)
       .pipe(fileSystemStream);
