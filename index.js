@@ -21,7 +21,7 @@ var filenames = [
     name:'ship_destroyers'
   },
   {
-    path:'panama_rivers.txt',
+    path:'rivers.txt',
     name:'ship_constructors',
   },
   {
