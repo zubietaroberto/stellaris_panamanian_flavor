@@ -1,3 +1,4 @@
+# Panama City
 Paitilla
 Punta Pacífica
 Marbella
@@ -92,3 +93,26 @@ Los Pueblos
 Rio Abajo
 San Sebastián
 San Miguelito
+
+# Colon City
+Coco Solo
+Nuevo Colón
+Manzanillo
+Sabanitas
+Santa Rita Arriba
+Puerto Pilón
+Cristóbal
+Cativá
+San Judas Tadeo
+Bahía las Minas
+Cuatro Altos
+
+# West Panama
+Panamá Pacífico
+Loma Cobá
+Burunga
+Nuevo Chorrillo
+Vacamonte
+Costa Verde
+Trapichito
+Puerto Caimito

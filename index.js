@@ -13,11 +13,11 @@ var output_file = path.join(__dirname, 'output.txt');
 // Filepaths
 var filenames = [
   {
-    path:'panama_city_neighborhoods.txt',
+    path:'neighborhoods.txt',
     name:'ship_corvettes'
   },
   {
-    path:'panama_city_streets.txt',
+    path:'streets.txt',
     name:'ship_destroyers'
   },
   {

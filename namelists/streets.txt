@@ -1,7 +1,9 @@
+# Panama City
 Causeway
 Los Poetas
 Los Mártires
 3 de Noviembre
+Avenida Simón Bolívar
 Cinta Costera
 Avenida Balboa
 Avenida Mexico
@@ -53,3 +55,20 @@ Salsipuedes
 Avenida A
 Avenida B
 Gustavo Torreglosa
+Ricardo J. Alfaro
+Tumba Muerto
+
+# Colon City
+Avenida Randolph
+Paseo Gorgas
+Paseo del Centenario
+Avenida Margarita
+Paseo Washington
+Avenida Roosevelt
+Silvio Salazar
+
+# West Panama
+Avenida las Américas
+
+# Other
+Camino de Cruces
