@@ -21,7 +21,7 @@ var filenames = [
   },
   {
     path:'rivers.txt',
-    name:'ship_constructors',
+    name:'ship_cruiser',
   },
   {
     path:'artists.txt',
@@ -29,15 +29,11 @@ var filenames = [
   },
   {
     path:'sports.txt',
-    name:'ship_cruiser',
+    name:'ship_constructors',
   },
   {
     path:'colonial.txt',
     name:'ship_generic',
-  },
-  {
-    path:'fauna.txt',
-    name:'ship_cruiser',
   },
   {
     path:'music.txt',
@@ -60,7 +56,7 @@ var filenames = [
     name:'planet_tundra',
   },
   {
-    path:'martyrs_january_9.txt',
+    path:'fauna.txt',
     name:'fort',
   },
   {
