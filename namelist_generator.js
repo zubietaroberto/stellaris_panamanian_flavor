@@ -24,6 +24,10 @@ var filenames = [
     name:'ship_cruiser',
   },
   {
+    path:'mountains.txt',
+    name:'ship_cruiser',
+  },
+  {
     path:'artists.txt',
     name:'ship_science',
   },
