@@ -32,15 +32,32 @@ const build_descriptor = function(){
   });
 }
 
+const build_prescripted_empire = function(){
+  var target_dir = `output/${mod_name}/prescripted_countries`;
+  fs.ensureDir(target_dir, (err, result) => {
+
+    var output_file = path.join(__dirname, `output/${mod_name}/prescripted_countries/prescripted_countries.txt`);
+    var outputStream = fs.createWriteStream(output_file, {encoding:'UTF-8'});
+
+    var render_stream = mu.compileAndRender('species.txt.mustache', {
+      mod_name: mod_name
+    });
+
+    render_stream.pipe(outputStream);
+  });
+}
+
 const build_namelist = function(){
 
   var target_dir = `output/${mod_name}/common/name_lists`;
-  var target_file = 'Panamanian.txt'
+  var target_file = 'panamanian.txt'
 
   return namelist_generator(target_dir, target_file)
 };
 
 Promise
-  .resolve(build_namelist)
+  .resolve({})
+  .then(build_namelist)
+  .then(build_prescripted_empire)
   .then(build_descriptor)
   ;
