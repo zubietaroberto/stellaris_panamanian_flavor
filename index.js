@@ -36,7 +36,7 @@ const build_prescripted_empire = function(){
   var target_dir = `output/${mod_name}/prescripted_countries`;
   fs.ensureDir(target_dir, (err, result) => {
 
-    var output_file = path.join(__dirname, `output/${mod_name}/prescripted_countries/prescripted_countries.txt`);
+    var output_file = path.join(__dirname, `${target_dir}/prescripted_countries.txt`);
     var outputStream = fs.createWriteStream(output_file, {encoding:'UTF-8'});
 
     var render_stream = mu.compileAndRender('species.txt.mustache', {
