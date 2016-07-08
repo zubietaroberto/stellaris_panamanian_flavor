@@ -9,6 +9,7 @@ mu.root = __dirname + '/templates';
 
 const mod_name = "panamanian_flavor";
 
+// Build the mod descriptor file
 const build_descriptor = function(){
 
   var target_dir = `output/${mod_name}`;
@@ -32,6 +33,7 @@ const build_descriptor = function(){
   });
 }
 
+// Build the Prescripted empire
 const build_prescripted_empire = function(){
   var target_dir = `output/${mod_name}/prescripted_countries`;
   fs.ensureDir(target_dir, (err, result) => {
@@ -47,6 +49,7 @@ const build_prescripted_empire = function(){
   });
 }
 
+// Build the Namelist
 const build_namelist = function(){
 
   var target_dir = `output/${mod_name}/common/name_lists`;
@@ -55,9 +58,23 @@ const build_namelist = function(){
   return namelist_generator(target_dir, target_file)
 };
 
+//Copy the thumbnail image
+const copy_thumbnail = function(){
+  var target_dir = `output/${mod_name}`;
+
+  fs.ensureDir(target_dir, (err, result) => {
+    var output_file = path.join(__dirname, `${target_dir}/${mod_name}.jpg`);
+    var input_file = path.join(__dirname, 'templates/thumbnail.jpg');
+
+    fs.createReadStream(input_file).pipe(fs.createWriteStream(output_file));
+  });
+}
+
+// Main operation chain
 Promise
   .resolve({})
   .then(build_namelist)
   .then(build_prescripted_empire)
   .then(build_descriptor)
+  .then(copy_thumbnail)
   ;
