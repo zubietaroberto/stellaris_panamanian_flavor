@@ -132,8 +132,8 @@ var filenames = [
 ]
 
 // Retrieves names from a namefile
-const name_feeder = function(filename){
-  var filepath = path.join(__dirname, `namelists/${filename.path}`);
+const name_feeder = function(query){
+  var filepath = path.join(__dirname, `namelists/${query.path}`);
   return Promise
     .fromCallback(  cb => fs.readFile(filepath, {encoding:'UTF-8'}, cb))
 
@@ -145,8 +145,12 @@ const name_feeder = function(filename){
         .filter( item_name    => !_.isEmpty(item_name))
         // Remove Commented
         .filter( item_name    => !_.startsWith(item_name, "#"))
+        // Add prefix, if it exists
+        .map( item_name       => (!_.isEmpty(query.prefix) ?
+          `${query.prefix} ${item_name}` : item_name
+        ))
         // Return result
-        .then(  parsed_items  => ({list: parsed_items, name:filename.name }) )
+        .then(  parsed_items  => ({list: parsed_items, name:query.name }) )
         ;
     })
     ;
