@@ -1,0 +1,44 @@
+# First Division
+Alianza
+Plaza Amador
+Chorrillo
+Árabe Unido
+San Francisco
+Santa Gema
+Veragüense
+Nacional
+Sporting
+Tauro
+
+# Second Division
+Leones de América
+Colón C3
+# New York
+Chiriquí
+Río Abajo
+Panamá Viejo
+Azuero
+Panamá Oeste
+Centenario
+Sport West
+Costa del Este
+# San Miguelito
+Tierra Firme
+Independiente
+
+# Third Division
+Promesa de Dios
+Bambú
+BAGOSO
+San Martín
+Real Chorrillito
+# Arsenal FC
+# Deportivo Independiente Darién
+Deportivo Diamante
+Garachiné
+# River Plate (David)
+Atlético Junior
+Halcones
+Galaxy
+Bugabita
+CANDIASA

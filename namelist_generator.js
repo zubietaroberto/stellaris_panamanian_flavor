@@ -129,6 +129,11 @@ var filenames = [
     path:'regnal_surnames.txt',
     name:'regnal_surnames',
   },
+  {
+    path:'football_teams.txt',
+    name:'fleet',
+    prefix:'Constelación'
+  },
 ]
 
 // Retrieves names from a namefile
