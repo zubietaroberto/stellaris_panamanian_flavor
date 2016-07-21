@@ -49,6 +49,20 @@ const build_prescripted_empire = function(){
   });
 }
 
+// Copy the translation strings
+const copy_translations = function(){
+  var target_dir = `output/${mod_name}/localisation`
+  fs.ensureDir(target_dir, (err, result) => {
+    var output_file = path.join(__dirname, `${target_dir}/pty_l_english.yml`);
+    var input_file = path.join(__dirname, 'templates/l_english.yml');
+    fs.createReadStream(input_file).pipe(fs.createWriteStream(output_file));
+
+    var output_file = path.join(__dirname, `${target_dir}/pty_l_spanish.yml`);
+    var input_file = path.join(__dirname, 'templates/l_spanish.yml');
+    fs.createReadStream(input_file).pipe(fs.createWriteStream(output_file));
+  })
+}
+
 // Build the Namelist
 const build_namelist = function(){
 
@@ -77,4 +91,5 @@ Promise
   .then(build_prescripted_empire)
   .then(build_descriptor)
   .then(copy_thumbnail)
+  .then(copy_translations)
   ;
