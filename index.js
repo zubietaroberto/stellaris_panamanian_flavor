@@ -2,6 +2,7 @@ var Promise = require('bluebird');
 var fs = require('fs-extra');
 var path = require('path');
 var mu = require("mu2");
+var streamToPromise = require("stream-to-promise");
 
 var namelist_generator = require('./namelist_generator');
 
@@ -13,53 +14,71 @@ const mod_name = "panamanian_flavor";
 const build_descriptor = function(){
 
   var target_dir = `output/${mod_name}`;
-  fs.ensureDir(target_dir, (err, result) => {
 
-    // Same file, copy 1
-    var output_file1 = path.join(__dirname, `output/${mod_name}.mod`)
-    var outputStream1 = fs.createWriteStream(output_file1, {encoding:'UTF-8'});
+  return Promise
+    .fromCallback( cb => fs.ensureDir(target_dir, cb))
+    .then( data => {
 
-    // Same file, copy 2
-    var output_file2 = path.join(__dirname, `output/${mod_name}/descriptor.mod`);
-    var outputStream2 = fs.createWriteStream(output_file2, {encoding:'UTF-8'});
+      // Same file, copy 1
+      var output_file1 = path.join(__dirname, `output/${mod_name}.mod`)
+      var outputStream1 = fs.createWriteStream(output_file1, {encoding:'UTF-8'});
 
-    // Render the descriptor into both files
-    var render_stream = mu.compileAndRender('descriptor.mod.mustache', {
-      mod_name: mod_name
-    });
+      // Same file, copy 2
+      var output_file2 = path.join(__dirname, `output/${mod_name}/descriptor.mod`);
+      var outputStream2 = fs.createWriteStream(output_file2, {encoding:'UTF-8'});
 
-    render_stream.pipe(outputStream1);
-    render_stream.pipe(outputStream2);
+      // Render the descriptor into both files
+      var render_stream = mu.compileAndRender('descriptor.mod.mustache', {
+        mod_name: mod_name
+      });
+
+      // Execute both operations
+      return Promise.all([
+        streamToPromise(render_stream.pipe(outputStream1)),
+        streamToPromise(render_stream.pipe(outputStream2))
+      ])
   });
 }
 
 // Build the Prescripted empire
 const build_prescripted_empire = function(){
   var target_dir = `output/${mod_name}/prescripted_countries`;
-  fs.ensureDir(target_dir, (err, result) => {
+  return Promise
+    .fromCallback( cb => fs.ensureDir(target_dir, cb))
+    .then( data => {
 
-    var output_file = path.join(__dirname, `${target_dir}/prescripted_countries.txt`);
-    var outputStream = fs.createWriteStream(output_file, {encoding:'UTF-8'});
+      var output_file = path.join(__dirname, `${target_dir}/prescripted_countries.txt`);
+      var outputStream = fs.createWriteStream(output_file, {encoding:'UTF-8'});
 
-    var render_stream = mu.compileAndRender('species.txt.mustache', {
-      mod_name: mod_name
-    });
+      var render_stream = mu.compileAndRender('species.txt.mustache', {
+        mod_name: mod_name
+      });
 
-    render_stream.pipe(outputStream);
+      return streamToPromise(render_stream.pipe(outputStream));
   });
 }
 
 // Copy the translation strings
 const copy_translations = function(){
   var target_dir = `output/${mod_name}/localisation`
-  fs.ensureDir(target_dir, (err, result) => {
-    var output_file = path.join(__dirname, `${target_dir}/pty_l_english.yml`);
-    var input_file = path.join(__dirname, 'templates/l_english.yml');
-    fs.createReadStream(input_file).pipe(fs.createWriteStream(output_file));
 
-    var output_file = path.join(__dirname, `${target_dir}/pty_l_spanish.yml`);
-    var input_file = path.join(__dirname, 'templates/l_spanish.yml');
-    fs.createReadStream(input_file).pipe(fs.createWriteStream(output_file));
+  return Promise
+    .fromCallback( cb => fs.ensureDir(target_dir, cb))
+    .then( data => {
+      var output_file1 = path.join(__dirname, `${target_dir}/pty_l_english.yml`);
+      var input_file1 = path.join(__dirname, 'templates/l_english.yml');
+      let readStream1 = fs.createReadStream(input_file1)
+      let outputStream1 = readStream1.pipe(fs.createWriteStream(output_file1))
+
+      var output_file2 = path.join(__dirname, `${target_dir}/pty_l_spanish.yml`);
+      var input_file2 = path.join(__dirname, 'templates/l_spanish.yml');
+      let readStream2 = fs.createReadStream(input_file2)
+      let outputStream2 = readStream2.pipe(fs.createWriteStream(output_file2))
+
+      return Promise.all([
+        streamToPromise(outputStream1),
+        streamToPromise(outputStream2)
+      ])
   })
 }
 
@@ -76,20 +95,25 @@ const build_namelist = function(){
 const copy_thumbnail = function(){
   var target_dir = `output/${mod_name}`;
 
-  fs.ensureDir(target_dir, (err, result) => {
-    var output_file = path.join(__dirname, `${target_dir}/${mod_name}.jpg`);
-    var input_file = path.join(__dirname, 'templates/thumbnail.jpg');
+  return Promise
+    .fromCallback( cb => fs.ensureDir(target_dir, cb))
+    .then( data => {
+      var output_file = path.join(__dirname, `${target_dir}/${mod_name}.jpg`);
+      var input_file = path.join(__dirname, 'templates/thumbnail.jpg');
+      var readStream = fs.createReadStream(input_file);
+      var outputStream = readStream.pipe(fs.createWriteStream(output_file));
 
-    fs.createReadStream(input_file).pipe(fs.createWriteStream(output_file));
+      return streamToPromise(outputStream);
   });
 }
 
 // Main operation chain
 Promise
-  .resolve({})
-  .then(build_namelist)
-  .then(build_prescripted_empire)
-  .then(build_descriptor)
-  .then(copy_thumbnail)
-  .then(copy_translations)
-  ;
+  .all([
+    build_namelist(),
+    build_descriptor(),
+    build_prescripted_empire(),
+    copy_thumbnail(),
+    copy_translations(),
+  ])
+  .then( () => console.log("Output complete") )
