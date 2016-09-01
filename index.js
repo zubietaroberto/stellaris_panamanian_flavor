@@ -11,7 +11,7 @@ mu.root = __dirname + '/templates';
 const mod_name = "panamanian_flavor";
 
 // Build the mod descriptor file
-const build_descriptor = function(){
+/*const build_descriptor = function(){
 
   var target_dir = `output/${mod_name}`;
 
@@ -38,10 +38,10 @@ const build_descriptor = function(){
         streamToPromise(render_stream.pipe(outputStream2))
       ])
   });
-}
+}*/
 
 // Build the Prescripted empire
-const build_prescripted_empire = function(){
+/*const build_prescripted_empire = function(){
   var target_dir = `output/${mod_name}/prescripted_countries`;
   return Promise
     .fromCallback( cb => fs.ensureDir(target_dir, cb))
@@ -56,7 +56,7 @@ const build_prescripted_empire = function(){
 
       return streamToPromise(render_stream.pipe(outputStream));
   });
-}
+}*/
 
 // Copy the translation strings
 /*const copy_translations = function(){
@@ -111,8 +111,8 @@ const build_namelist = function(){
 Promise
   .all([
     build_namelist(),
-    build_descriptor(),
-    build_prescripted_empire(),
+    //build_descriptor(),
+    //build_prescripted_empire(),
     //copy_thumbnail(),
     //copy_translations(),
   ])

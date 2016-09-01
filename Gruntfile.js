@@ -1,6 +1,9 @@
 module.exports = function(grunt) {
 
     let mod_name = 'panamanian_flavor'
+    let mustache_variables = {
+        mod_name: mod_name
+    }
 
     // Configuration
     grunt.initConfig({
@@ -25,14 +28,28 @@ module.exports = function(grunt) {
                         src:['l_*.yml'],
                         dest:`output/${mod_name}/localisation`,
                         rename: (dest, src) => `${dest}/pty_${src}`
-                    },
-
-                    // Descriptor
-                    {
-
                     }
                 ]
             }
+        },
+
+        mustache_compile: {
+            variables: mustache_variables,
+            files:[
+                {
+                    src:'templates/descriptor.mod.mustache',
+                    dest:[
+                            `output/${mod_name}.mod`,
+                            `output/${mod_name}/descriptor.mod`
+                        ]
+                },
+                {
+                    src:'templates/species.txt.mustache',
+                    dest:[
+                            `output/${mod_name}/prescripted_countries/prescripted_countries.txt`
+                        ]
+                }
+            ]
         }
     })
 
@@ -40,7 +57,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy')
   grunt.loadNpmTasks('grunt-contrib-clean')
 
+  //Load Custom Tasks
+  grunt.loadTasks('tasks')
+
   // Register Tasks
-  grunt.registerTask('default', ['clean', 'copy'])
+  grunt.registerTask('default', ['clean', 'mustache_compile', 'copy'])
 
 }
