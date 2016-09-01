@@ -59,7 +59,7 @@ const build_prescripted_empire = function(){
 }
 
 // Copy the translation strings
-const copy_translations = function(){
+/*const copy_translations = function(){
   var target_dir = `output/${mod_name}/localisation`
 
   return Promise
@@ -80,7 +80,7 @@ const copy_translations = function(){
         streamToPromise(outputStream2)
       ])
   })
-}
+}*/
 
 // Build the Namelist
 const build_namelist = function(){
@@ -92,7 +92,7 @@ const build_namelist = function(){
 };
 
 //Copy the thumbnail image
-const copy_thumbnail = function(){
+/*const copy_thumbnail = function(){
   var target_dir = `output/${mod_name}`;
 
   return Promise
@@ -105,7 +105,7 @@ const copy_thumbnail = function(){
 
       return streamToPromise(outputStream);
   });
-}
+}*/
 
 // Main operation chain
 Promise
@@ -113,7 +113,7 @@ Promise
     build_namelist(),
     build_descriptor(),
     build_prescripted_empire(),
-    copy_thumbnail(),
-    copy_translations(),
+    //copy_thumbnail(),
+    //copy_translations(),
   ])
   .then( () => console.log("Output complete") )
