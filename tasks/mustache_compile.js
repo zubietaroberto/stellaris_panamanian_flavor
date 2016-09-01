@@ -11,6 +11,7 @@ module.exports = function(grunt) {
         let mu_variables = grunt.config('mustache_compile').variables
         for(mapping of grunt.config('mustache_compile').files){
 
+            mu.root = process.cwd()
             let render_stream = mu.compileAndRender(mapping.src, mu_variables)
             
             // Main Chain

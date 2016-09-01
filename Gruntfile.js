@@ -36,6 +36,8 @@ module.exports = function(grunt) {
         mustache_compile: {
             variables: mustache_variables,
             files:[
+
+                // Descriptor file (2 copies)
                 {
                     src:'templates/descriptor.mod.mustache',
                     dest:[
@@ -43,6 +45,8 @@ module.exports = function(grunt) {
                             `output/${mod_name}/descriptor.mod`
                         ]
                 },
+
+                // Prescripted Countries
                 {
                     src:'templates/species.txt.mustache',
                     dest:[
@@ -50,6 +54,13 @@ module.exports = function(grunt) {
                         ]
                 }
             ]
+        },
+
+        // Namelist itself
+        namelist_compile:{
+            src: "templates/namelist.txt.mustache",
+            target_dir:`output/${mod_name}/common/name_lists`,
+            target_filename:'panamanian.txt'
         }
     })
 
@@ -61,6 +72,6 @@ module.exports = function(grunt) {
   grunt.loadTasks('tasks')
 
   // Register Tasks
-  grunt.registerTask('default', ['clean', 'mustache_compile', 'copy'])
+  grunt.registerTask('default', ['clean', 'mustache_compile', 'namelist_compile', 'copy'])
 
 }

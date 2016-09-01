@@ -1,12 +1,11 @@
 // Basic Requires
 var fs = require('fs-extra');
 var path = require('path');
+const mu = require("mu2");
 var _ = require("lodash");
-var mu = require("mu2");
 var Promise = require('bluebird');
 
 // Basic constants
-mu.root = __dirname + '/templates'
 var items_per_line = 8;
 
 // Filepaths
@@ -138,7 +137,7 @@ var filenames = [
 
 // Retrieves names from a namefile
 const name_feeder = function(query){
-  var filepath = path.join(__dirname, `namelists/${query.path}`);
+  var filepath = path.join(process.cwd(), `namelists/${query.path}`);
   return Promise
     .fromCallback(  cb => fs.readFile(filepath, {encoding:'UTF-8'}, cb))
 
@@ -199,13 +198,13 @@ const row_accumulator = function(struct){
 };
 
 // Creates the file
-const file_generator = function(output_folder, output_file){
+const file_generator = function(input_file, output_folder, output_file){
   return function(struct){
     return new Promise((resolve, reject) => {
       fs.ensureDir(output_folder, (err, result) => {
         var fileSystemStream = fs.createWriteStream(output_file, {encoding:'UTF-8'});
         mu
-          .compileAndRender('namelist.txt.mustache', struct)
+          .compileAndRender(input_file, struct)
           .pipe(fileSystemStream)
           .on('finish', resolve)
           ;
@@ -217,9 +216,9 @@ const file_generator = function(output_folder, output_file){
 /*
 * ENTRY POINT. Returns a Promise that resolves when the file is complete.
 */
-module.exports = function(folder, filename){
-
-  var output_folder = path.join(__dirname, folder);
+module.exports = function(input_file, folder, filename){
+  var input_file = path.join(process.cwd(), input_file)
+  var output_folder = path.join(process.cwd(), folder);
   var output_file = path.join(output_folder, filename);
 
   return Promise
@@ -235,6 +234,6 @@ module.exports = function(folder, filename){
     .then(row_accumulator)
 
     // Output file from the template using Mustache
-    .then(file_generator(output_folder, output_file))
+    .then(file_generator(input_file, output_folder, output_file))
     ;
 }
