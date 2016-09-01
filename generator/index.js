@@ -8,7 +8,7 @@ var Promise = require('bluebird');
 // Basic constants
 var items_per_line = 8;
 
-// Filepaths
+// Defines the mapping between namelists and name categories
 var filenames = require('./mapping')
 
 // Retrieves names from a namefile

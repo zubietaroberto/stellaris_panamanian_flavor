@@ -1,3 +1,15 @@
+
+/*
+    This mapping defines how each namelist is assigned to each name 
+    category. Several namelists can add to each category. Several 
+    categories can share a namelist.
+
+    attributes for each object:
+    path: filename
+    name: name category
+    prefix: (optional) adds a string before each name inside this category
+*/
+
 module.exports = [
   {
     path:'neighborhoods.txt',
