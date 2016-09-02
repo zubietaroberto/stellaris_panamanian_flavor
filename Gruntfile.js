@@ -1,3 +1,6 @@
+const Promise = require("bluebird")
+const generator = require('./generator')
+
 module.exports = function(grunt) {
 
     let mod_name = 'panamanian_flavor'
@@ -34,7 +37,11 @@ module.exports = function(grunt) {
         },
 
         mustache_compile: {
+
+            // Variables for the mustache compiler
             variables: mustache_variables,
+            dynamic_variables: generator,
+
             files:[
 
                 // Descriptor file (2 copies)
@@ -52,16 +59,17 @@ module.exports = function(grunt) {
                     dest:[
                             `output/${mod_name}/prescripted_countries/prescripted_countries.txt`
                         ]
+                },
+
+                // Namelist
+                {
+                    src: "templates/namelist.txt.mustache",
+                    dest:[
+                        `output/${mod_name}/common/name_lists/panamanian.txt`
+                    ]
                 }
             ]
         },
-
-        // Namelist itself
-        namelist_compile:{
-            src: "templates/namelist.txt.mustache",
-            target_dir:`output/${mod_name}/common/name_lists`,
-            target_filename:'panamanian.txt'
-        }
     })
 
   // Load Tasks
@@ -72,6 +80,6 @@ module.exports = function(grunt) {
   grunt.loadTasks('tasks')
 
   // Register Tasks
-  grunt.registerTask('default', ['clean', 'mustache_compile', 'namelist_compile', 'copy'])
+  grunt.registerTask('default', ['clean', 'mustache_compile', 'copy'])
 
 }
