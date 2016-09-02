@@ -1,9 +1,8 @@
 // Basic Requires
-var fs = require('fs-extra');
-var path = require('path');
-const mu = require("mu2");
-var _ = require("lodash");
-var Promise = require('bluebird');
+const Promise = require('bluebird')
+const fs = require('fs-extra')
+const path = require('path')
+const _ = require("lodash")
 
 // Basic constants
 var items_per_line = 8;
@@ -70,33 +69,13 @@ const row_accumulator = function(struct){
     struct[prop] = output;
   }
   return struct;
-
-};
-
-// Creates the file
-const file_generator = function(input_file, output_folder, output_file){
-  return function(struct){
-    return new Promise((resolve, reject) => {
-      fs.ensureDir(output_folder, (err, result) => {
-        var fileSystemStream = fs.createWriteStream(output_file, {encoding:'UTF-8'});
-        mu
-          .compileAndRender(input_file, struct)
-          .pipe(fileSystemStream)
-          .on('finish', resolve)
-          ;
-      });
-    });
-  };
 };
 
 /*
-* ENTRY POINT. Returns a Promise that resolves when the file is complete.
+* ENTRY POINT. Returns a Promise that returns the mapping for the template,
+* ready for compilation into any templating engine.
 */
-module.exports = function(input_file, folder, filename){
-  var input_file = path.join(process.cwd(), input_file)
-  var output_folder = path.join(process.cwd(), folder);
-  var output_file = path.join(output_folder, filename);
-
+module.exports = function(){
   return Promise
     .all(filenames)
 
@@ -108,8 +87,4 @@ module.exports = function(input_file, folder, filename){
 
     // Organize elements in rows
     .then(row_accumulator)
-
-    // Output file from the template using Mustache
-    .then(file_generator(input_file, output_folder, output_file))
-    ;
 }

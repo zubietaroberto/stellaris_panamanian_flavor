@@ -1,7 +1,7 @@
 const mu = require("mu2")
-const fs = require('fs-extra')
-const path = require('path')
 const Promise = require("bluebird")
+const fs = Promise.promisifyAll(require('fs-extra'))
+const path = require('path')
 const streamToPromise = require("stream-to-promise")
 
 module.exports = function(grunt) {
@@ -25,8 +25,8 @@ module.exports = function(grunt) {
                 .map(destination => {
                     let array = destination.split("/") 
                     let dir = array.splice(0, array.length -1).join("/")
-                    return Promise
-                        .fromCallback(cb => fs.ensureDir(dir, cb))
+                    return fs
+                        .ensureDirAsync(dir)
                         .then(() => destination)
                 })
                 // Create files
