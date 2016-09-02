@@ -31,13 +31,13 @@ module.exports = function(grunt) {
                 })
                 // Create files
                 .map(output => {
-                    console.log(output)
+                    grunt.log.verbose.ok(output)
                     outputStream = fs.createWriteStream(output, {encoding:'UTF-8'})
                     return streamToPromise(render_stream.pipe(outputStream))
                 })
                 // Feedback
                 .then( dest => 
-                    console.log(`Processed ${dest.length} files`)
+                    grunt.log.ok(`Processed ${dest.length} files`)
                 )
                 // finalize
                 .finally(done)

@@ -36,7 +36,7 @@ module.exports = function(grunt){
                 return streamToPromise(renderStream.pipe(fileSystemStream))
             })
             // Feedback
-            .then(() => console.log(output_filepath))
+            .then(() => grunt.log.ok(`Processed 1 file`))
             // End
             .finally(async)
     })
