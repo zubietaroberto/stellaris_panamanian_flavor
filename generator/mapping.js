@@ -56,7 +56,7 @@ module.exports = [
     name:'planet_arid',
   },
   {
-    path:'chiriqui.txt',
+    path:'province_chiriqui.txt',
     name:'planet_tundra',
   },
   {
