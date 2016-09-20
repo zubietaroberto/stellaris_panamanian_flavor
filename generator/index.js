@@ -1,25 +1,26 @@
 // Basic Requires
 const Promise = require('bluebird')
-const fs = require('fs-extra')
+const fs = Promise.promisifyAll(require('fs-extra'))
 const path = require('path')
 const _ = require("lodash")
+const yaml = Promise.promisifyAll(require('js-yaml'))
 
 // Basic constants
 var items_per_line = 8;
 
-// Defines the mapping between namelists and name categories
-var filenames = require('./mapping')
+// Coroutine that feeds names from a namefile
+const name_feeder = function*(query){
 
-// Retrieves names from a namefile
-const name_feeder = function(query){
-  var filepath = path.join(process.cwd(), `namelists/${query.path}`);
-  return Promise
-    .fromCallback(  cb => fs.readFile(filepath, {encoding:'UTF-8'}, cb))
+  // Result
+  let parsed_items = []
+  for(rel_path of query.namelists){
 
-    // Parse files into a list of names
-    .then(    raw_file => {
-      return Promise
-        .all(raw_file.split(/\r\n|\r|\n/))
+    //Read the file
+    let filepath = path.join(process.cwd(), `namelists/${rel_path}`) 
+    let raw_file = yield fs.readFileAsync(filepath, {encoding:'UTF-8'})
+
+    // Parse the names
+    let names = raw_file.split(/\r\n|\r|\n/)
         // Remove Empty
         .filter( item_name    => !_.isEmpty(item_name))
         // Remove Commented
@@ -28,11 +29,13 @@ const name_feeder = function(query){
         .map( item_name       => (!_.isEmpty(query.prefix) ?
           `${query.prefix} ${item_name}` : item_name
         ))
-        // Return result
-        .then(  parsed_items  => ({list: parsed_items, name:query.name }) )
-        ;
-    })
-    ;
+
+    // Add the names to the accumulator
+    _.merge(parsed_items, names)
+  }
+
+  // Return the mappping
+  return {list: parsed_items, name:query.name }
 };
 
 // Merges all filenames into a single dictionary
@@ -71,16 +74,24 @@ const row_accumulator = function(struct){
   return struct;
 };
 
+// Loads the YAML Mapping
+const load_mapping = function*(){
+    let filepath = path.join(process.cwd(), 'generator/mapping.yml')
+    let output = yield fs.readFileAsync(filepath, 'utf-8')
+    let mapping = yaml.safeLoad(output)
+    return mapping.mappings
+}
+
 /*
 * ENTRY POINT. Returns a Promise that returns the mapping for the template,
 * ready for compilation into any templating engine.
 */
 module.exports = function(){
   return Promise
-    .all(filenames)
+    .coroutine(load_mapping)()
 
     // Transform each filename into a namelist
-    .map(name_feeder)
+    .map(Promise.coroutine(name_feeder))
 
     // Merge filelists into a single dictionary
     .reduce(name_accumulator, {})

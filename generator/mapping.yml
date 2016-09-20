@@ -1,0 +1,147 @@
+#    This mapping defines how each namelist is assigned to each name 
+#    category. Several namelists can add to each category. Several 
+#    categories can share a namelist.
+mappings:
+  
+  -
+    name: ship_corvettes
+    namelists:
+      - 'neighborhoods.txt'
+  
+  -
+    name: ship_destroyers
+    namelists:
+      - 'streets.txt'
+  
+  -
+    name: ship_cruiser
+    namelists:
+      - 'rivers.txt'
+      - 'mountains.txt'
+
+  -
+    name: ship_battleship
+    namelists:
+      - 'vip_historical.txt'
+
+  -
+    name: ship_science
+    namelists:
+      - 'artists.txt'
+
+  -
+    name: ship_constructors
+    namelists:
+      - 'sports.txt'
+
+  -
+    name: ship_colony
+    namelists:
+      - 'music.txt'
+
+  -
+    name: ship_generic
+    namelists:
+      - 'colonial.txt'
+
+  -
+    name: transport
+    namelists:
+      - 'panama_canal_zone.txt'
+
+  -
+    name: fleets
+    prefix: 'Constelación'
+    namelists:
+      - 'football_teams.txt'
+
+  -
+    name: planet_desert
+    namelists:
+      - 'province_herrera.txt'
+
+  -
+    name: planet_arid
+    namelists:
+      - 'province_los_santos.txt'
+
+  -
+    name: planet_tundra
+    namelists:
+      - 'province_chiriqui.txt'
+
+  -
+    name: planet_arctic
+    namelists:
+      - 'mountain_towns.txt'
+
+  -
+    name: planet_ocean
+    namelists:
+      - 'islands.txt'
+
+  -
+    name: planet_tropical
+    namelists:
+      - 'beaches.txt'
+
+  -
+    name: planet_continental
+    namelists:
+      - 'towns_other.txt'
+
+  -
+    name: planet_gaia
+    namelists:
+      - 'panama_canal.txt'
+
+  -
+    name: planet_tomb
+    namelists:
+      - 'archeology.txt'
+
+  -
+    name: planet_generic
+    namelists:
+      - 'filler_planets.txt'
+      - 'province_capitals.txt'
+
+  -
+    name: fort
+    namelists:
+    - 'fauna.txt'
+
+  -
+    name: outpost
+    namelists:
+      - 'martyrs_january_9.txt'
+
+  -
+    name: names_male
+    namelists:
+      - 'names_male.txt'
+
+  -
+    name: names_female
+    namelists:
+      - 'names_female.txt'
+
+  -
+    name: surnames
+    namelists:
+      - 'surnames.txt'
+
+  -
+    name: regnal_male
+    namelists:
+      - 'regnal_male.txt'
+
+  -
+    name: regnal_female
+    namelists:
+      - 'regnal_female.txt'
+
+  -
+    name: regnal_surnames
+    namelists:
+      - 'regnal_surnames.txt'
