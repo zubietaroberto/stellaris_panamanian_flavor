@@ -48,7 +48,7 @@ module.exports = [
     name:'ship_battleship',
   },
   {
-    path:'herrera.txt',
+    path:'province_herrera.txt',
     name:'planet_desert',
   },
   {
