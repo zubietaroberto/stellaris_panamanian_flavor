@@ -1,6 +1,7 @@
-const mu = require("mu2")
 const Promise = require("bluebird")
 const _ = require('lodash')
+const fs = Promise.promisifyAll(require('fs'))
+const mustache = require('mustache')
 
 module.exports = function(grunt) {
 
@@ -20,18 +21,19 @@ module.exports = function(grunt) {
             // Define result array
             let result_destinations = []
 
-            mu.root = process.cwd()
             for (mapping of output_array){
                 for (source of mapping.src){
 
                     // Start rendering the file to a stream
-                    let render_stream = mu.compileAndRender(source, variables)
-                    let destination_array = _.isString(mapping.dest) ? 
+                    let template_raw = yield fs.readFileAsync(source, {encoding:'utf-8'})
+                    let text = mustache.render(template_raw, variables)
+
+                    let destination_array = _.isString(mapping.dest) ?
                         [mapping.dest] : mapping.dest;
 
                     for (destination of destination_array){
-                        // Output the stream 
-                        grunt.file.write(destination, render_stream)
+                        // Output the stream
+                        grunt.file.write(destination, text)
 
                         // Logs
                         grunt.log.ok(destination)
