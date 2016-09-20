@@ -22,3 +22,5 @@ Guacamaya
 Rana Dorada
 Tití
 Tucán
+Borriguero
+Tórtola

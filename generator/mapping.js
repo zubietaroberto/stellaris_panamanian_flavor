@@ -52,7 +52,7 @@ module.exports = [
     name:'planet_desert',
   },
   {
-    path:'los_santos.txt',
+    path:'province_los_santos.txt',
     name:'planet_arid',
   },
   {

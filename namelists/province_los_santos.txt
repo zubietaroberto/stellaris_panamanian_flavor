@@ -1,0 +1,88 @@
+# Los Santos province. Divided by districts.
+Guararé
+El Espinal
+El Macano
+Guararé Arriba
+La Enea
+La Pasera
+Las Trancas
+Llano Abajo
+El Hato
+Perales
+
+# Las Tablas
+Bajo Corral
+# Bayano
+El Carate
+El Cocal
+El Manantial
+El Muñoz
+El Pedregoso
+La Laja
+La Miel
+# La Palma
+La Tiza
+# Las Palmitas
+Las Tablas Abajo
+Nuario
+Palmira
+Peña Blanca
+Río Hondo
+San José
+# San Miguel
+Santo Domingo
+El Sesteadero
+Valle Rico
+Vallerriquito
+
+Villa de Los Santos
+El Ejido
+El Guásimo
+La Colorada
+La Espigadilla
+Las Cruces
+Las Guabas
+Los Ángeles
+Los Olivos
+Llano Largo
+Sabanagrande
+Santa Ana
+Tres Quebradas
+Villa Lourdes
+Agua Buena
+
+Macaracas
+Bahía Honda
+Bajos de Güera
+Corozal
+Chupá
+El Cedro
+Espino Amarillo
+La Mesa
+Llano de Piedras
+Las Palmas
+Mogollón
+
+Pedasí
+Los Asientos
+Mariabé
+Purio
+Oria Arriba
+
+Pocrí
+El Cañafístulo
+Lajamina
+# Paraíso
+Paritilla
+
+Tonosí
+Altos de Güera
+Cañas
+El Bebedero
+El Cacao
+El Cortezo
+# Flores
+Guánico
+La Tronosa
+Cambutal
+Isla de Cañas
