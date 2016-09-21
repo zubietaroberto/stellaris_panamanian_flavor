@@ -2,56 +2,56 @@
 
 # Chitré
 La Arena
-San Miguel de Monagrillo
+# Monagrillo
 Llano Bonito
 San Juan Bautista
 
 Las Minas
 # Chepo
 Chumical
-El Toro
+# El Toro
 Leones
 Quebrada del Rosario
 Quebrada El Ciprián
 
 Los Pozos
 El Capurí
-El Calabacito
-El Cedro
+# El Calabacito
+# El Cedro
 La Arena
 La Pitaloza
-Los Cerritos
-Los Cerros de Paja
+# Los Cerritos
+# Los Cerros de Paja
 Las Llanas
 
 Ocú
-Cerro Largo
-Los Llanos
-Llano Grande
-Peñas Chatas
+# Cerro Largo
+# Los Llanos
+# Llano Grande
+# Peñas Chatas
 El Tijera
 Menchaca
 Entradero del Castillo
 
 Parita
 Cabuya
-Los Castillos
-Llano de la Cruz
+# Los Castillos
+# Llano de la Cruz
 París
 Portobelillo
 Potuga
 
 Pesé
-Las Cabras
-Los Pájaros
+# Las Cabras
+# Los Pájaros
 El Barrero
-El Pedregoso
+# El Pedregoso
 El Ciruelo
 Sabanagrande
 Rincón Hondo
 
 Santa María
 Chupampa
-El Rincón
-El Limón
+# El Rincón
+# El Limón
 Los Canelos
