@@ -12,7 +12,7 @@ module.exports = function(grunt) {
         let output_array = this.files
 
         // Generator Coroutine function
-        let variables_generator = function*(){
+        let variables_coroutine = Promise.coroutine(function*(){
 
             // Merge all variables
             let dynamic_variables = yield task_options.dynamic_variables()
@@ -45,7 +45,7 @@ module.exports = function(grunt) {
 
             // Result
             return result_destinations
-        }
+        })
 
         /*
             Main Execution Chain
@@ -53,7 +53,7 @@ module.exports = function(grunt) {
         let done = this.async()
         Promise
             // Execute the Generator as a Coroutine
-            .try(Promise.coroutine(variables_generator))
+            .try(variables_coroutine)
             // finalize
             .then(done)
             // Catch any error
