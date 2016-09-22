@@ -9,6 +9,8 @@ Calle Amelia Denis de Icaza
 Calle Bonaparte-Wyse
 Avenida Eloy Alfaro
 Avenida Omar Torrijos
+Calle San Petersburgo
+Avenida Canfield
 Avenida Arnulfo Arias
 Avenida Ascanio Arosemena
 Avenia Ascanio Villalaz
@@ -55,6 +57,7 @@ Vía Argentina
 Calle Ghetto de Varsovia
 Avenida Samuel Lewis
 Calle Uruguay
+Calle Alemania
 Calle Aquilino de la Guardia
 Calle 50
 José de la Cruz Herrera
