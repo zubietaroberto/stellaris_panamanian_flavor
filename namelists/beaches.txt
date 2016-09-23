@@ -1,30 +1,56 @@
+# West Panama Riviera
+Farfán
 Veracruz
 Playa Bonita
+Vacamonte
+Puerto Caimito
+Playa Leona
+Malibú
 Chame
 Gorgona
 Coronado
 Punta Barco
+Vista Mar
+Río Mar
+Corona
+La Hermita
 Sea Cliff
+Bijao
+San Carlos
 Santa Clara
 Farallón
+Playa Blanca
+Buenaventura
 Juan Hombrón
-Rio Mar
-El Palmar
+
+# Las Perlas
+# Playa Cacique
+# Playa de las Suecas
+
+# Azuero
+El Agallito
+Venao
+Guánico
+Playa Cambutal
+Langosta
+
+# Veraguas-Chiriquí
+Mariato
+Santa Catalina
+Las Lajas
+Playa Barqueta
+
+# Bocas del Toro
 Ismito
 Bluff
-Boca de Drago
-Cayo Zapatilla
-Langosta
-La Guaira
+# Wizard
+
+# Colón
 María Chiquita
-La Barqueta
-Las Lajas
-Venao
+La Guaira
+Nombre de Dios
+
+# I Don't Know
+Boca de Drago
 El Uverito
-Playa Blanca
-San Carlos
-Playa Barqueta
-Las Lajas
-Mariato
 Icaco
-Playa Leona
