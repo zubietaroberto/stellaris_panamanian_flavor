@@ -1,23 +1,68 @@
-Contadora
+# Panama Bay
 Taboga
+Taboguilla
+Urabá
+Otoque
+Taborcillo
+Isla Farallón
 Melones
-Coiba
-Cébaco
-Isla Grande
-Isla del Rey
-Bastimentos
-Tortuga
-Escudo
-Las Perlas
-San Blas
+
+# Causeway
 Flamenco
 Naos
 Perico
-Carnero
-Galeta
-Cabra
-Mamey
-Narganá
-Palenque
-Iguana
+
+# Las Perlas Archipelago
+Las Perlas
+Isla del Rey
+# Isla Pedro González
+Bayoneta
+Gibraleón
+Casaya
+Casayeta
+# Isla La Mina
+Viveros
+Cane Island
+Galera
+Punta Bajo Rico
+Contadora
+Saboga
+Chapera
 Mogo Mogo
+
+# Azuero-Veraguas-Chiriquí
+Coiba
+Cébaco
+Gobernadora
+# Isla Leones
+Jicarón
+# Isla Parida
+Palenque
+# Iguana
+
+# Bocas del Toro
+Bastimentos
+Isla Cristóbal
+# Isla Popa
+Solarte
+# Tortuga
+Escudo de Veraguas
+Cayo Zapatilla
+
+# Colón
+Galeta
+Isla Grande
+Isla Tambor
+Isla Linton
+Isla Mamey
+
+# San Blas
+San Blas
+Guna Yala
+Gaigirgordup
+Narganá
+Ucuptuma
+Seletupa
+
+# Panama Canal
+Barro Colorado
