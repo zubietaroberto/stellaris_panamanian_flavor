@@ -50,7 +50,7 @@ mappings:
       - 'panama_canal_zone.txt'
 
   -
-    name: fleets
+    name: fleet
     prefix: 'Constelación'
     namelists:
       - 'football_teams.txt'
