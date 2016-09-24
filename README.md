@@ -28,7 +28,7 @@ How to use
 * The `templates/` folder contains the base files used to create the namelist.
 * The names themselves are in the folder `namelists/`. Each file is a different
 category. Pound symbols(`#`) are used as comment markers.
-* The `generator/mapping.js` contains the mapping between the fields and the
+* The `generator/mapping.yml` contains the mapping between the fields and the
 namelist. Several namelists can fill the names for any category.
 
 Credits

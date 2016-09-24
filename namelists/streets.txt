@@ -1,5 +1,38 @@
 # Panama City
 Causeway
+Avenida Emanuel Vergara
+Avenida Julio Linares
+Quarry Heights Road
+Avenida Amador
+Avenida Ancón
+Calle Amelia Denis de Icaza
+Calle Bonaparte-Wyse
+Avenida Eloy Alfaro
+Avenida Omar Torrijos
+Calle San Petersburgo
+Avenida Canfield
+Avenida Arnulfo Arias
+Avenida Ascanio Arosemena
+Avenia Ascanio Villalaz
+Calle Rubén Darío
+Plaza de la Independencia
+Plaza Tomás Herrera
+Plaza Simón Bolívar
+Plaza de Francia
+Parque Santa Ana
+Parque Quinto Centenario
+Parque Harry Strunz
+Parque Andrés Bello
+Parque Chino-Panameño
+Parque Metropolitano
+Parque Omar
+Avenida Demetrio Brid
+Jardín de Paz
+Plaza de la Democracia
+Parque Urracá
+Mirador del Pacífico
+Parque Porras
+Parque Francisco Arias
 Los Poetas
 Los Mártires
 3 de Noviembre
@@ -11,7 +44,7 @@ Avenida Cuba
 Avenida Justo Arosemena
 Avenida Central
 Avenida España
-Cinco de Mayo
+Plaza Cinco de Mayo
 Panamericana
 Frangipani
 Luis F. Clement
@@ -21,18 +54,28 @@ Avenida Ecuador
 Manuel Espinosa Batista
 Eusebio Morales
 Vía Argentina
+Calle Ghetto de Varsovia
 Avenida Samuel Lewis
 Calle Uruguay
+Calle Alemania
+Calle Aquilino de la Guardia
 Calle 50
 José de la Cruz Herrera
 Vía Israel
 Vía Brasil
+Vía Grecia
+Ramón Arias
+El Paical
+Avenida Saúl J. Esses
+Avenida Fermín Noudeau
+Avenida Rafael Alemán
 Avenida Italia
 Calle Winston Churchill
 Calle Juan XXIII
 Boulevard Pacífica
 Vía Belisario Porras
 República de la India
+República de China
 Avenida Cincuentenario
 Avenida Rodrigo de Bastidas
 Avenida Centenario
@@ -46,8 +89,12 @@ Corredor Norte
 Corredor Sur
 4 de Julio
 Avenida la Amistad
+Avenida Miguel Brostella
+Camino Real de Bethania
 Avenida 12 de Octubre
 Fernández de Córdova
+Avenida de la Paz
+Avenida Manuel Zárate
 Avenida Santa Elena
 Avenida La Pulida
 Boyd-Roosevelt
@@ -62,6 +109,7 @@ Tumba Muerto
 # Colon City
 Avenida Randolph
 Paseo Gorgas
+Paseo de Lesseps
 Paseo del Centenario
 Avenida Margarita
 Paseo Washington

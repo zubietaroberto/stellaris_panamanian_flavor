@@ -38,37 +38,38 @@ module.exports = function(grunt) {
 
         mustache_compile: {
 
-            // Variables for the mustache compiler
-            variables: mustache_variables,
-            dynamic_variables: generator,
+            // Variables shared by all files
+            options: {
+                variables: mustache_variables,
+                dynamic_variables: generator,
+            },
 
-            files:[
+            target:{
 
-                // Descriptor file (2 copies)
-                {
-                    src:'templates/descriptor.mod.mustache',
-                    dest:[
-                            `output/${mod_name}.mod`,
-                            `output/${mod_name}/descriptor.mod`
-                        ]
-                },
+                files:[
 
-                // Prescripted Countries
-                {
-                    src:'templates/species.txt.mustache',
-                    dest:[
-                            `output/${mod_name}/prescripted_countries/prescripted_countries.txt`
-                        ]
-                },
+                    // Descriptor file (2 copies)
+                    {
+                        src:'templates/descriptor.mod.mustache',
+                        dest:[
+                                `output/${mod_name}.mod`,
+                                `output/${mod_name}/descriptor.mod`
+                            ]
+                    },
 
-                // Namelist
-                {
-                    src: "templates/namelist.txt.mustache",
-                    dest:[
-                        `output/${mod_name}/common/name_lists/panamanian.txt`
-                    ]
-                }
-            ]
+                    // Prescripted Countries
+                    {
+                        src:'templates/species.txt.mustache',
+                        dest:`output/${mod_name}/prescripted_countries/prescripted_countries.txt`
+                    },
+
+                    // Namelist
+                    {
+                        src: "templates/namelist.txt.mustache",
+                        dest:`output/${mod_name}/common/name_lists/panamanian.txt`
+                    }
+                ]   
+            }
         },
     })
 
