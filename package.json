@@ -5,6 +5,7 @@
   "scripts": {
     "start": "grunt"
   },
+  "repository":"zubietaroberto/stellaris_panamanian_flavor",
   "author": "zubietaroberto",
   "license": "MIT",
   "dependencies": {
