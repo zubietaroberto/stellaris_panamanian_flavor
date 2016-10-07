@@ -1,7 +1,9 @@
 #    This mapping defines how each namelist is assigned to each name 
 #    category. Several namelists can add to each category. Several 
 #    categories can share a namelist.
+#
 #    Structure:
+#
 #    <template_tag>:
 #       <namelists>: Array with the names to be included
 #       <prefix>: (Optional) prefix to be added to each name.
@@ -58,6 +60,10 @@ mappings:
     namelists:
       - 'province_los_santos.txt'
 
+  planet_savannah:
+    namelists:
+      - 'shire_guna_yala.txt'
+
   planet_tundra:
     namelists:
       - 'province_chiriqui.txt'
@@ -65,6 +71,10 @@ mappings:
   planet_arctic:
     namelists:
       - 'mountain_towns.txt'
+
+  planet_alpine:
+    namelists:
+      - 'shire_ngabe_bugle.txt'
 
   planet_ocean:
     namelists:
