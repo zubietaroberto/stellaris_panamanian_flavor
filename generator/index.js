@@ -14,13 +14,13 @@ const name_feeder_coroutine = Promise.coroutine(function*(query){
   let result_dictionary = {}
   for (prop in query){
 
-    // Iterate through the dictionary 
+    // Iterate through the dictionary
     let property = query[prop]
     let parsed_items = []
     for(rel_path of property.namelists){
 
       //Read the file
-      let filepath = path.join(process.cwd(), `namelists/${rel_path}`) 
+      let filepath = path.join(process.cwd(), `namelists/${rel_path}`)
       let raw_file = yield fs.readFileAsync(filepath, {encoding:'UTF-8'})
 
       // Parse the names
@@ -40,6 +40,8 @@ const name_feeder_coroutine = Promise.coroutine(function*(query){
 
     // Return the mapping
     result_dictionary[prop] = parsed_items
+
+    console.log(`Count: ${prop} => ${parsed_items.length} `)
   }
 
   return result_dictionary
