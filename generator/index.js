@@ -35,7 +35,7 @@ const name_feeder_coroutine = Promise.coroutine(function*(query){
           ))
 
       // Add the names to the accumulator
-      _.merge(parsed_items, names)
+      parsed_items.push(...names)
     }
 
     // Return the mapping
