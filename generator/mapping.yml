@@ -1,5 +1,5 @@
-#    This mapping defines how each namelist is assigned to each name 
-#    category. Several namelists can add to each category. Several 
+#    This mapping defines how each namelist is assigned to each name
+#    category. Several namelists can add to each category. Several
 #    categories can share a namelist.
 #
 #    Structure:
@@ -9,15 +9,15 @@
 #       <prefix>: (Optional) prefix to be added to each name.
 
 mappings:
-  
+
   ship_corvettes:
     namelists:
       - 'neighborhoods.txt'
-  
+
   ship_destroyers:
     namelists:
       - 'streets.txt'
-  
+
   ship_cruiser:
     namelists:
       - 'rivers.txt'
@@ -71,6 +71,8 @@ mappings:
   planet_arctic:
     namelists:
       - 'mountain_towns.txt'
+      - 'shire_madugandi_wargandi.txt'
+      - 'shire_embera_wounaan.txt'
 
   planet_alpine:
     namelists:
