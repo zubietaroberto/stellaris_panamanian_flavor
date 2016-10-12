@@ -2,7 +2,7 @@
 
 # Corregimientos
 Ailigandi
-Narganá
+# Narganá
 Puerto Obaldía
 Tubuala
 
@@ -37,7 +37,7 @@ Uargandup
 Yandup
 Agwanusadup
 Digir Dubbu
-Niadup 
+Niadup
 Ticantiquí
 Maguebgandi
 Nabagandi
