@@ -41,7 +41,6 @@ mappings:
 
   ship_generic:
     namelists:
-      - 'colonial.txt'
       - 'ruben_blades.txt'
       - 'omar_alfanno.txt'
       - 'samy_y_sandra_sandoval.txt'
@@ -104,8 +103,9 @@ mappings:
 
   planet_generic:
     namelists:
-      - 'filler_planets.txt'
-      - 'province_capitals.txt'
+      - filler_planets.txt
+      - province_capitals.txt
+      - colonial.txt
 
   fort:
     namelists:
