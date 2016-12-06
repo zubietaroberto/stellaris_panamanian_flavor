@@ -29,6 +29,8 @@ const name_feeder_coroutine = Promise.coroutine(function*(query){
           .filter( item_name    => !_.isEmpty(item_name))
           // Remove Commented
           .filter( item_name    => !_.startsWith(item_name, "#"))
+          // Remove Spaces at Beginning and End
+          .map(_.trim)
           // Add prefix, if it exists
           .map( item_name       => (!_.isEmpty(property.prefix) ?
             `${property.prefix} ${item_name}` : item_name

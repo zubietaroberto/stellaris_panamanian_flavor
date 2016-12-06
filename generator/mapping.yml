@@ -44,6 +44,7 @@ mappings:
       - 'colonial.txt'
       - 'ruben_blades.txt'
       - 'omar_alfanno.txt'
+      - 'samy_y_sandra_sandoval.txt'
 
   transport:
     namelists:
