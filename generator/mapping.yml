@@ -43,6 +43,7 @@ mappings:
     namelists:
       - 'colonial.txt'
       - 'ruben_blades.txt'
+      - 'omar_alfanno.txt'
 
   transport:
     namelists:
