@@ -45,6 +45,7 @@ mappings:
       - 'ruben_blades.txt'
       - 'omar_alfanno.txt'
       - 'samy_y_sandra_sandoval.txt'
+      - pedrito_altamiranda.txt
 
   transport:
     namelists:
