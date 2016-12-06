@@ -42,6 +42,7 @@ mappings:
   ship_generic:
     namelists:
       - 'colonial.txt'
+      - 'ruben_blades.txt'
 
   transport:
     namelists:
