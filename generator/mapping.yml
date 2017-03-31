@@ -100,6 +100,10 @@ mappings:
   planet_tomb:
     namelists:
       - 'archeology.txt'
+  
+  planet_habitat:
+    namelists:
+      - flora.txt
 
   planet_generic:
     namelists:
