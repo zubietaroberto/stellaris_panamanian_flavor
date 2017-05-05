@@ -12,10 +12,10 @@ module.exports = function(grunt) {
         let output_array = this.files
 
         // Generator Coroutine function
-        let variables_coroutine = Promise.coroutine(function*(){
+        let variables_coroutine = async function(){
 
             // Merge all variables
-            let dynamic_variables = yield task_options.dynamic_variables()
+            let dynamic_variables = await task_options.dynamic_variables()
             let variables = _.merge(task_options.variables, dynamic_variables)
 
             // Define result array
@@ -25,7 +25,7 @@ module.exports = function(grunt) {
                 for (source of mapping.src){
 
                     // Start rendering the file to a stream
-                    let template_raw = yield fs.readFileAsync(source, {encoding:'utf-8'})
+                    let template_raw = await fs.readFileAsync(source, {encoding:'utf-8'})
                     let text = mustache.render(template_raw, variables)
 
                     let destination_array = _.isString(mapping.dest) ?
@@ -45,7 +45,7 @@ module.exports = function(grunt) {
 
             // Result
             return result_destinations
-        })
+        }
 
         /*
             Main Execution Chain
