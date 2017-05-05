@@ -9,14 +9,27 @@ Juan Carlos Varela
 # Dictators
 Manuel Antonio Noriega
 Omar Torrijos Herrera
+Rubén Darío Paredes
 
-# Politicians
+# Dictatorship Presidents 1969 - 1989
+Demetrio Lakas
+Aristides Royo
+Nicolás Ardito Barletta
+Eric Arturo Delvalle
+
+# Pre-Dictatorship presidents 1912-1969
 Arnulfo Arias Madrid
+Harmodio Arias Madrid
 Belisario Porras
+Ernesto Tisdel Lefevre
+Florencio Harmodio Arosemena
 Justo Arosemena
-
-# First Martyr of 1964-01-09
-Ascanio Arosemena
+Rodolfo Chiari
+Roberto Chiari
+Juan Demóstenes Arosemena
+Ricardo Joaquín Alfaro
+José Remón Cantera
+Marco Aurelio Robles
 
 # First President
 Manuel Amador Guerrero
@@ -25,6 +38,17 @@ Manuel Amador Guerrero
 José Agustín Arango
 Tomás Arias
 Federico Boyd
+
+# Guillermo Endara's Vice-Presidents
+Ricardo Arias Calderón
+Guillermo Billy Ford
+
+# First Martyr of 1964-01-09
+Ascanio Arosemena
+
+# Guna Rebellion 1925-02-12
+Waga Ebinkili
+Nele Kantule
 
 # American Panama Canal
 George Washington Goethals
