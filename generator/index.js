@@ -9,7 +9,7 @@ const yaml = Promise.promisifyAll(require('js-yaml'))
 var items_per_line = 8;
 
 // Coroutine that feeds names from a namefile
-const name_feeder_coroutine = Promise.coroutine(function*(query){
+const name_feeder_coroutine = async function(query){
 
   let result_dictionary = {}
   for (prop in query){
@@ -21,7 +21,7 @@ const name_feeder_coroutine = Promise.coroutine(function*(query){
 
       //Read the file
       let filepath = path.join(process.cwd(), `namelists/${rel_path}`)
-      let raw_file = yield fs.readFileAsync(filepath, {encoding:'UTF-8'})
+      let raw_file = await fs.readFileAsync(filepath, {encoding:'UTF-8'})
 
       // Parse the names
       let names = raw_file.split(/\r\n|\r|\n/)
@@ -48,7 +48,7 @@ const name_feeder_coroutine = Promise.coroutine(function*(query){
 
   return result_dictionary
 
-})
+}
 
 // Merges names into rows
 const row_accumulator = function(struct){
@@ -74,12 +74,12 @@ const row_accumulator = function(struct){
 };
 
 // Coroutine that loads the YAML Mapping
-const load_mapping_coroutine = Promise.coroutine(function*(){
+const load_mapping_coroutine = async function(){
     let filepath  = path.join(process.cwd(), 'generator/mapping.yml')
-    let output    = yield fs.readFileAsync(filepath, 'utf-8')
+    let output    = await fs.readFileAsync(filepath, 'utf-8')
     let mapping   = yaml.safeLoad(output)
     return mapping.mappings
-})
+}
 
 /*
 * ENTRY POINT. Returns a Promise that returns the mapping for the template,
