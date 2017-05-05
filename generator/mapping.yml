@@ -45,6 +45,7 @@ mappings:
       - 'omar_alfanno.txt'
       - 'samy_y_sandra_sandoval.txt'
       - pedrito_altamiranda.txt
+      - comando_tiburon.txt
 
   transport:
     namelists:
