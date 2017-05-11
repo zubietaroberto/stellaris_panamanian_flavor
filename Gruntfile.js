@@ -31,7 +31,15 @@ module.exports = function(grunt) {
                         src:['l_*.yml'],
                         dest:`output/${mod_name}/localisation`,
                         rename: (dest, src) => `${dest}/pty_${src}`
-                    }
+                    },
+
+                    // Logo folder
+                    {
+                      expand: true,
+                      cwd:'templates/',
+                      src:'flags/**',
+                      dest:`output/${mod_name}`
+                    },
                 ]
             }
         },
@@ -68,7 +76,7 @@ module.exports = function(grunt) {
                         src: "templates/namelist.txt.mustache",
                         dest:`output/${mod_name}/common/name_lists/panamanian.txt`
                     }
-                ]   
+                ]
             }
         },
     })
