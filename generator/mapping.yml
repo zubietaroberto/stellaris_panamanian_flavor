@@ -47,6 +47,7 @@ mappings:
       - pedrito_altamiranda.txt
       - comando_tiburon.txt
       - food.txt
+      - la_cascara.txt
 
   transport:
     namelists:
