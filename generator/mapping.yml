@@ -116,7 +116,8 @@ mappings:
 
   fort:
     namelists:
-    - 'fauna.txt'
+      - fauna.txt
+      - monsters.txt
 
   outpost:
     namelists:
