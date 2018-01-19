@@ -1,3 +1,5 @@
+# http://www.hidromet.com.pa/cuencas.php
+
 Sixaola
 Yorkin
 San San
@@ -17,14 +19,14 @@ Río Chagres
 Río Gatún
 Cascajal
 Cangandi
-Río Lagarto
+Lagarto
 Río Chiriquí
 Río David
 Majagua
 Río San Félix
 Tabasará
-San Pablo
-Cobre
+Río San Pablo
+Río Cobre
 Río La Villa
 Río Pacora
 Río Chepo
@@ -36,4 +38,19 @@ Río Sábanas
 Tuira
 Balsas
 Chucunaque
-Sambú
+Río Sambú
+Escárrea
+Río Belén
+Palo Blanco
+Río Platanal
+Río Caté
+Cuango
+Mandinga
+Río Cartí
+Río Quebro
+Río Caimito
+Matasnillo
+Río Juan Díaz
+Tucutí
+Río Marea
+Jaqué
