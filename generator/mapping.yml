@@ -49,6 +49,14 @@ mappings:
       - food.txt
       - la_cascara.txt
 
+  ship_titan:
+    namelists:
+      - monsters.txt
+
+  ship_colossus:
+    namelists:
+      - monsters.txt
+
   transport:
     namelists:
       - 'panama_canal_zone.txt'
@@ -111,17 +119,16 @@ mappings:
   planet_generic:
     namelists:
       - filler_planets.txt
-      - province_capitals.txt
       - colonial.txt
 
   fort:
     namelists:
       - fauna.txt
-      - monsters.txt
+      - province_capitals.txt
 
-  outpost:
+  ion_cannon:
     namelists:
-      - 'martyrs_january_9.txt'
+      - martyrs_january_9.txt
 
   names_male:
     namelists:
