@@ -1,28 +1,45 @@
 panamanian = {
-	name_list="panamanian"
-	ship_prefix="FDP"
-	species_name="Panamanian"
-	species_plural="Panamanians"
-	species_class="MAM"
-	species_adjective="Panamanian"
-	species_bio=""
-	portrait="mam7"
 	name="República de Panamá"
 	adjective="Panamanian"
+	ignore_portrait_duplication=no
+	spawn_enabled=yes
+	spawn_as_fallen=yes
+
+	ship_prefix="FDP"
+
+	species = {
+		portrait="mam7"
+		name="Panamanian"
+		plural="Panamanians"
+		class="MAM"
+		adjective="Panamanian"
+		name_list="panamanian"
+		trait="trait_communal"
+		trait="trait_sedentary"
+		trait="trait_thrifty"
+	}
+
+	ethic="ethic_xenophile"
+	ethic="ethic_fanatic_materialist"
 	authority = "auth_democratic"
 	government=gov_direct_democracy
-	ftl=warp
-	weapon="tech_mass_drivers_1"
+	civics={
+		"civic_free_haven"
+		"civic_shadow_council"
+	}
+
 	planet_name="Panamá"
 	planet_class="pc_tropical"
 	system_name="Balboa"
 	initializer=""
+
 	graphical_culture="mammalian_01"
 	city_graphical_culture="mammalian_01"
+
 	empire_flag={
 		icon={
-			category="human"
-			file="flag_human_12.dds"
+			category="panamanian"
+			file="acp.dds"
 		}
 		background={
 			category="backgrounds"
@@ -36,49 +53,53 @@ panamanian = {
 		}
 	}
 	ruler={
-		gender=male
-		name="Juan Carlos Varela"
-		portrait="mam7"
-		texture=3
-		hair=0
-		clothes=4
-		ruler_title="Don"
-		ruler_title_female="Doña"
+		gender= male
+		name = "Juan Carlos Varela"
+		portrait = "mam7"
+		texture = 3
+		hair = 0
+		clothes = 4
+		ruler_title = "Don"
+		ruler_title_female = "Doña"
 	}
-	spawn_enabled=yes
-	spawn_as_fallen=yes
-	ignore_portrait_duplication=no
-	ethic="ethic_xenophile"
-	ethic="ethic_fanatic_materialist"
-	civics={
-		"civic_free_haven"
-		"civic_shadow_council"
-	}
-	trait="trait_communal"
-	trait="trait_sedentary"
-	trait="trait_thrifty"
 }
 
 panamanian2 ={
-	key="Autoridad del Canal de Panamá"
-	name_list="panamanian"
-	ship_prefix="ACP"
-	species_name="Panamanian"
-	species_plural="Panamanian"
-	species_class="MAM"
-	species_adjective="Panamanian"
-	species_bio=""
-	portrait="mam5"
 	name="Autoridad del Canal de Panamá"
 	adjective="Panamanian"
+	spawn_enabled=yes
+	spawn_as_fallen=yes
+	ignore_portrait_duplication=no
+
+	ship_prefix="ACP"
+
+	species = {
+		portrait="mam7"
+		name="Panamanian"
+		plural="Panamanians"
+		class="MAM"
+		adjective="Panamanian"
+		name_list="panamanian"
+		trait="trait_communal"
+		trait="trait_sedentary"
+		trait="trait_thrifty"
+	}
+
+	room="ethic_authoritarian_room"
+	ethic="ethic_fanatic_authoritarian"
+	ethic="ethic_spiritualist"
 	authority="auth_imperial"
 	government="gov_theocratic_monarchy"
-	ftl=warp
-	weapon="tech_lasers_1"
+	civics={
+		"civic_aristocratic_elite"
+		"civic_functional_architecture"
+	}
+
 	planet_name="Corozal"
 	planet_class="pc_continental"
 	system_name="Zona del Canal"
 	initializer=""
+
 	graphical_culture="mammalian_01"
 	city_graphical_culture="mammalian_01"
 	empire_flag={
@@ -100,25 +121,11 @@ panamanian2 ={
 	ruler={
 		gender=male
 		name="Jorge Quijano"
-		portrait="mam5"
+		portrait="mam7"
 		texture=0
 		hair=0
 		clothes=4
 		ruler_title="Administrator"
 		ruler_title_female="Administrator"
 	}
-	spawn_as_fallen=yes
-	ignore_portrait_duplication=no
-	ignore_portrait_duplication=no
-	room="ethic_authoritarian_room"
-	spawn_enabled=yes
-	ethic="ethic_fanatic_authoritarian"
-	ethic="ethic_spiritualist"
-	civics={
-		"civic_aristocratic_elite"
-		"civic_functional_architecture"
-	}
-	trait="trait_thrifty"
-	trait="trait_sedentary"
-	trait="trait_communal"
 }
