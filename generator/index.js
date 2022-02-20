@@ -76,7 +76,7 @@ function row_accumulator(struct) {
 async function load_mapping_coroutine() {
   let filepath = path.join(process.cwd(), 'generator/mapping.yml')
   let output = await fs.readFileAsync(filepath, 'utf-8')
-  let mapping = yaml.safeLoad(output)
+  let mapping = yaml.load(output)
   return mapping.mappings
 }
 
