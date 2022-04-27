@@ -24,7 +24,7 @@
     "@types/bluebird": "^3.5.36",
     "@types/js-yaml": "^4.0.5",
     "@types/lodash": "^4.14.178",
-    "grunt": "^1.4.1",
+    "grunt": "^1.5.2",
     "grunt-contrib-clean": "^2.0.0",
     "grunt-contrib-copy": "^1.0.0"
   }
