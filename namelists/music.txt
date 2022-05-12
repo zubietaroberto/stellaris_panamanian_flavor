@@ -1,18 +1,50 @@
-Rubén Blades
+# Songwriters
 Omar Alfanno
-Osvaldo Ayala
+Erika Ender
+
+# Rock
 Llevarte a Marte
 Polyphase
+Sana Capital
 Rabanes
 Os Almirantes
 Son Miserables
+Los 33
+Las Lolas
+Rencilla
+
+# Urban
 Mr Saik
 Mr Fox
 Japanese
 El General
 Joey Montana
 Flex
+El Sech
+El Boza
+Italian Somali
+Kafu Banton
+Danger Man
+El Kid
+Comando Tiburón
+
+# Folk Music
 Samy Y Sandra Sandoval
+Osvaldo Ayala
+Nenito Vargas y Los Plumas Negras
+Ulpiano Vergara
+Jhonathan Chávez
+Manuel y Abdiel y Los Consentidos
+Jorge Y Balbino Gómez
+Yin Carrizo
+
+# Salsa
+Rubén Blades
 Ricardo y Alberto Gaitán
+La Kshamba
+Pedrito Altamiranda
+Los Beachers
+
+# Authors of the National Anthem
 Jerónimo de la Ossa
 Santos Jorge
