@@ -57,6 +57,10 @@ mappings:
     namelists:
       - monsters.txt
 
+  ship_juggernaut:
+    namelists:
+      - 'panama_canal.txt'
+
   transport:
     namelists:
       - 'panama_canal_zone.txt'
