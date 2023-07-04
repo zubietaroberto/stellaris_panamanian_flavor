@@ -1,4 +1,3 @@
-const Promise = require('bluebird')
 const generator = require('./generator')
 
 module.exports = function(grunt) {

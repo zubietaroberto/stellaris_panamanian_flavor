@@ -1,9 +1,8 @@
 // Basic Requires
-const Promise = require('bluebird')
-const fs = Promise.promisifyAll(require('fs-extra'))
+const fs = require('fs/promises')
 const path = require('path')
 const _ = require('lodash')
-const yaml = Promise.promisifyAll(require('js-yaml'))
+const yaml = require('yaml')
 
 // Basic constants
 const items_per_line = 8
@@ -18,7 +17,7 @@ async function name_feeder_coroutine(query) {
     for (rel_path of property.namelists) {
       //Read the file
       let filepath = path.join(process.cwd(), `namelists/${rel_path}`)
-      let raw_file = await fs.readFileAsync(filepath, { encoding: 'UTF-8' })
+      let raw_file = await fs.readFile(filepath, { encoding: 'UTF-8' })
 
       // Parse the names
       let names = raw_file
@@ -75,8 +74,8 @@ function row_accumulator(struct) {
 // Coroutine that loads the YAML Mapping
 async function load_mapping_coroutine() {
   let filepath = path.join(process.cwd(), 'generator/mapping.yml')
-  let output = await fs.readFileAsync(filepath, 'utf-8')
-  let mapping = yaml.load(output)
+  let output = await fs.readFile(filepath, 'utf-8')
+  let mapping = yaml.parse(output)
   return mapping.mappings
 }
 
@@ -84,16 +83,9 @@ async function load_mapping_coroutine() {
 * ENTRY POINT. Returns a Promise that returns the mapping for the template,
 * ready for compilation into any templating engine.
 */
-module.exports = function() {
-  return (
-    Promise
-      //Load the Mapping
-      .try(load_mapping_coroutine)
-
-      // Transform each filename into a namelist
-      .then(name_feeder_coroutine)
-
-      // Organize elements in rows
-      .then(row_accumulator)
-  )
+module.exports = async function() {
+  const mapping = await load_mapping_coroutine();
+  const names = await name_feeder_coroutine(mapping);
+  const rows = row_accumulator(names);
+  return rows;
 }

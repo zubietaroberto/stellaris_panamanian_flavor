@@ -1,10 +1,9 @@
-const Promise = require('bluebird')
 const _ = require('lodash')
-const fs = Promise.promisifyAll(require('fs'))
+const fs = require('fs/promises')
 const mustache = require('mustache')
 
 module.exports = function(grunt) {
-  grunt.registerMultiTask('mustache_compile', function() {
+  grunt.registerMultiTask('mustache_compile', async function () {
     // Get Grunt Options
     let task_options = this.options()
     let output_array = this.files
@@ -21,7 +20,7 @@ module.exports = function(grunt) {
       for (mapping of output_array) {
         for (source of mapping.src) {
           // Start rendering the file to a stream
-          let template_raw = await fs.readFileAsync(source, {
+          let template_raw = await fs.readFile(source, {
             encoding: 'utf-8'
           })
           let text = mustache.render(template_raw, variables)
@@ -49,15 +48,12 @@ module.exports = function(grunt) {
             Main Execution Chain
         */
     let done = this.async()
-    Promise
-      // Execute the Generator as a Coroutine
-      .try(variables_coroutine)
-      // finalize
-      .then(done)
-      // Catch any error
-      .catch(error => {
-        grunt.log.error(error)
-        done(error)
-      })
+    try {
+      await variables_coroutine()
+      done()
+    } catch (error) {
+      grunt.log.error(error)
+      done(error)
+    }
   })
 }
